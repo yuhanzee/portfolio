@@ -1,0 +1,106 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.label {
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: var(--sketchy-radius-1);
+  border: 3px solid var(--border-dark);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: var(--primary);
+  background: var(--bg-primary);
+}
+
+.textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.submitBtn {
+  background: var(--primary);
+  color: #FFFDF6;
+  border: 3px solid var(--border-dark);
+  padding: 14px 28px;
+  border-radius: var(--sketchy-radius-1);
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 4px 4px 0px var(--border-dark);
+  transition: all 0.2s ease;
+}
+
+:global(html[data-theme="dark"]) .submitBtn {
+  color: #1A112E;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background: var(--primary-hover);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--border-dark);
+}
+
+.submitBtn:active:not(:disabled) {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0px var(--border-dark);
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.successMessage {
+  padding: 30px 20px;
+  border-radius: var(--sketchy-radius-2);
+  background: var(--accent);
+  border: 3px solid var(--border-dark);
+  color: var(--border-dark);
+  text-align: center;
+  box-shadow: var(--card-shadow);
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.successTitle {
+  font-family: var(--font-serif);
+  font-weight: 900;
+  margin-bottom: 8px;
+  font-size: 22px;
+}
+
+.successText {
+  font-family: var(--font-handwritten);
+  font-size: 22px;
+  font-weight: bold;
+}

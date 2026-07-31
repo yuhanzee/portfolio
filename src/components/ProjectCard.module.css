@@ -1,0 +1,147 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  border: 3px solid var(--border-dark);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  height: 100%;
+}
+
+.card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 65%; /* aspect ratio ~3:2 */
+  overflow: hidden;
+  background: var(--bg-tertiary);
+  border-bottom: 3px solid var(--border-dark);
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.card:hover .image {
+  transform: scale(1.03);
+}
+
+.content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.type {
+  font-family: var(--font-handwritten);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.description {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--primary);
+  margin-top: auto;
+  width: 100%;
+}
+
+.footerLeft {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.25s ease;
+}
+
+.card:hover .footerLeft {
+  gap: 10px;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  transition: transform 0.25s ease;
+}
+
+.card:hover .arrow {
+  transform: translateX(2px);
+}
+
+.githubIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid var(--border-dark);
+  background: var(--accent);
+  color: var(--text-primary);
+  box-shadow: 2px 2px 0px var(--border-dark);
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.githubIcon:hover {
+  transform: scale(1.1) rotate(5deg);
+  background: var(--accent-hover);
+}
+
+.githubIcon:active {
+  transform: scale(0.95);
+  box-shadow: 1px 1px 0px var(--border-dark);
+}
+
+/* Tool badges container */
+.toolsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.toolBadge {
+  font-size: 11px;
+  font-weight: 700;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border: 1.5px solid var(--border-dark);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
