@@ -502,3 +502,58 @@ export const YellowCurvedArrow: React.FC<DoodleProps> = ({
     />
   </svg>
 );
+
+export function MusicNoteDoodle({
+  color = "currentColor",
+  width = 42,
+  height = 42,
+  strokeWidth = 2.8,
+  className = "",
+}: DoodleProps) {
+  return (
+    <svg
+      viewBox="0 0 48 48"
+      width={width}
+      height={height}
+      fill="none"
+      className={className}
+    >
+      <path
+        d="M28 10v20"
+        stroke={color}
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
+      />
+      <path
+        d="M28 10l10 3"
+        stroke={color}
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <ellipse
+        cx="22"
+        cy="34"
+        rx="4.5"
+        ry="3.5"
+        stroke={color}
+        strokeWidth={strokeWidth}
+      />
+      <ellipse
+        cx="36"
+        cy="37"
+        rx="4.5"
+        ry="3.5"
+        stroke={color}
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d="M28 30c2-2 5-2 10-1V13"
+        stroke={color}
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
