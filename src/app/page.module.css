@@ -1397,7 +1397,7 @@
 
 }
 
-.factMug{
+.factMusic{
 
   right:520px;
   top:40px;
@@ -1534,7 +1534,7 @@
     animation:float1 5s ease-in-out infinite;
 }
 
-.factMug{
+.factMusic{
     animation:float2 5.5s ease-in-out infinite;
 }
 
@@ -1553,13 +1553,8 @@
 .factRain{
     animation:float2 6.4s ease-in-out infinite;
 }
-
-.factFlowers{
-    animation:float1 6.5s ease-in-out infinite;
-}
-
-.factFigma{
-    animation:float2 6.8s ease-in-out infinite;
+.factForest{
+    animation:float2 6.4s ease-in-out infinite;
 }
 
 /* =========================================================
@@ -1717,7 +1712,11 @@
 }
 
 :global([data-theme="dark"]) .funFactsSection::before {
-  opacity: 0.08;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.19) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+
+  background-size: 24px 24px;
 }
 
 :global([data-theme="dark"]) .funFactsTitle {
