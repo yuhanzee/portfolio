@@ -410,24 +410,33 @@ export default function Home() {
                 </div>
               </div>
 
-              <a
-                href="#contact"
-                onClick={(e) => {
-                  e.preventDefault();
-                  const contactEl = document.getElementById("contact");
-                  if (contactEl) {
-                    window.scrollTo({
-                      top: contactEl.offsetTop - 80,
-                      behavior: "smooth",
-                    });
-                  }
-                }}
-                className="sketchy-btn"
-              >
-                Let&apos;s Connect
-              </a>
-            </div>
-          
+              <div className={styles.aboutButtons}>
+  <a
+    href="#contact"
+    onClick={(e) => {
+      e.preventDefault();
+      const contactEl = document.getElementById("contact");
+      if (contactEl) {
+        window.scrollTo({
+          top: contactEl.offsetTop - 80,
+          behavior: "smooth",
+        });
+      }
+    }}
+    className="sketchy-btn"
+  >
+    Let&apos;s Connect
+  </a>
+
+  <a
+    href="/cv/Yuhansi-Pathiraja-CV.pdf"
+    download
+    className={styles.cvScrapbookBtn}
+  >
+    Download CV
+  </a>
+</div>
+</div>
            {/* Right side CV QR Code card */}
             <div className={styles.cvCard}>
            <div className={styles.philosophyBox}>
