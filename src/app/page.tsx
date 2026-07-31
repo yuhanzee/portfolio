@@ -628,7 +628,7 @@ export default function Home() {
         <div className={styles.tapeRight}></div>
 
         <Image
-          src="/project/instagram-sketch.webp"
+          src="/projects/instagram-sketch.webp"
           alt="Instagram Sketch"
           width={380}
           height={720}
