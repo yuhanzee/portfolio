@@ -42,6 +42,7 @@ import {
   HelloRays,
   StarOutlineDoodle,
   YellowCurvedArrow,
+  MusicNoteDoodle,
 } from "@/components/Scribbles";
 import styles from "./page.module.css";
 
@@ -378,7 +379,7 @@ export default function Home() {
         </section>
 
         {/* ABOUT ME & PHILOSOPHY SECTION */}
-        <section className={styles.about}>
+<section id="about" className={styles.about}>
           <div className={`${styles.aboutGrid} container`}>
             {/* About traits */}
             <div>
@@ -660,20 +661,18 @@ export default function Home() {
 
       </div>
 
-      {/* Mug */}
+      {/* Music */}
 
-      <div className={`${styles.fact} ${styles.factMug}`}>
+     <div className={`${styles.fact} ${styles.factMusic}`}>
 
-        <MugDoodle
-          className={styles.factIcon}
-        />
+        <MusicNoteDoodle className={styles.factIcon} />
 
-        <h4>Mugs</h4>
+        <h4>Music</h4>
 
         <p>
-          OK,maybe i'm a
+          The perfect
           <br />
-          mug collector 
+          background noise.
         </p>
 
       </div>
