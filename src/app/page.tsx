@@ -429,7 +429,7 @@ export default function Home() {
   </a>
 
   <a
-    href="/cv/Yuhansi-Pathiraja-CV.pdf"
+    href="/cv/Yuhansi-Pathiraja CV.pdf"
     download
     className={styles.cvScrapbookBtn}
   >
