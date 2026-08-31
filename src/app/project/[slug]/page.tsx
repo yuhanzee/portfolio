@@ -103,13 +103,13 @@ export default function ProjectPage({ params }: PageProps) {
 
         {/* STATS SUMMARY GRID */}
         <div className={styles.statsGrid}>
-          <div className={styles.statCard}>
-            <div className={styles.statLabelGroup}>
-              <ClockIcon size={14} />
-              <span className={styles.statLabel}>Duration</span>
-            </div>
-            <span className={styles.statValue}>{project.duration || "N/A"}</span>
-          </div>
+         <div className={styles.statCard}>
+  <div className={styles.statLabelGroup}>
+    <CalendarIcon size={14} />
+    <span className={styles.statLabel}>Duration</span>
+  </div>
+  <span className={styles.statValue}>{project.duration}</span>
+</div>
 
           <div className={styles.statCard}>
             <div className={styles.statLabelGroup}>
@@ -127,15 +127,14 @@ export default function ProjectPage({ params }: PageProps) {
             <span className={styles.statValue}>{project.tools.slice(0, 2).join(", ")}</span>
           </div>
 
-          <div className={styles.statCard}>
-            <div className={styles.statLabelGroup}>
-              <CalendarIcon size={14} />
-              <span className={styles.statLabel}>Year</span>
-            </div>
-            <span className={styles.statValue}>{project.year}</span>
-          </div>
-        </div>
-
+         <div className={styles.statCard}>
+  <div className={styles.statLabelGroup}>
+    <CalendarIcon size={14} />
+    <span className={styles.statLabel}>Duration</span>
+  </div>
+  <span className={styles.statValue}>{project.duration}</span>
+</div>
+</div>
         {/* MAIN MOCKUP BANNER */}
         <div className={styles.bannerWrapper}>
           <Image
