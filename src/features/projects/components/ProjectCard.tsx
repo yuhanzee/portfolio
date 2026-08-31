@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Project } from "@/data/projects";
-import { ArrowRightIcon } from "./Icons";
+import { Project } from "@/features/projects/data/projects";
+import { ArrowRightIcon } from "@/shared/components/Icons";
 import styles from "./ProjectCard.module.css";
 
 interface ProjectCardProps {

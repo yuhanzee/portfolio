@@ -6,7 +6,6 @@ export interface Project {
   description: string;
   image: string;
   tools: string[];
-  year: string;
   duration?: string;
   role?: string;
   githubUrl?: string;
@@ -30,6 +29,7 @@ export interface Project {
     };
     userFlow: string[];
     wireframesIntro?: string;
+    wireframes?: string[];
     finalDesignIntro?: string;
     prototypeUrl?: string;
     whatILearned: string;
@@ -38,6 +38,264 @@ export interface Project {
 
 export const projectsData: Project[] = [
   {
+  slug: "Skillaro",
+
+  title: "Academic To Industry Skill Bridge Platform",
+
+  category: "UI/UX Design",
+
+  type: "Web UI & Design System Prototype",
+
+  description:
+    "A comprehensive UI/UX prototype for an AI-powered platform that connects industry skill demands, evidence-based skill profiling, career readiness, personalized learning, and AI mock interview preparation.",
+
+  image: "/projects/profile.png",
+
+  tools: [
+    "Figma",
+    "Wireframing",
+    "Prototyping",
+    "Design System",
+    "User Research"
+  ],
+
+  duration: "4 weeks",
+
+  role: "UI/UX Designer",
+
+  figmaUrl:
+    "https://www.figma.com/design/h8qQvzvbqHgFPoCASg9Qnc/Research-Prototype---Design-System?node-id=0-1&t=A7hbjEJIV9qTL14j-1",
+
+  caseStudy: {
+
+    problem:
+      "Students and job seekers often struggle to understand how their existing skills align with current industry expectations. Industry insights, skill evidence, career readiness, learning guidance, and interview preparation are often disconnected across different platforms.",
+
+    goal:
+      "Design a user-friendly platform that brings industry insights, evidence-based skill profiling, career readiness assessment, personalized learning, and AI-powered mock interviews into one connected experience.",
+
+    userResearch: {
+
+      intro:
+        "Research focused on understanding how students and job seekers experience the gap between their existing skills and current industry expectations.",
+
+      points: [
+        "Users find it difficult to understand which skills are currently demanded by employers",
+        "Skills and supporting evidence are scattered across CVs, projects, academic work, certificates, and portfolios",
+        "Users need a clear way to understand their career readiness and what they should improve next"
+      ],
+
+      chartData: [
+        {
+          name: "Industry Insights",
+          value: 25,
+          color: "#8C8FFA"
+        },
+        {
+          name: "Skill Profile",
+          value: 25,
+          color: "#FFDE4D"
+        },
+        {
+          name: "Career Readiness",
+          value: 25,
+          color: "#EC4899"
+        },
+        {
+          name: "Learning & Interview",
+          value: 25,
+          color: "#D0FFA4"
+        }
+      ]
+    },
+
+    userPersona: {
+
+      name: "yuhansi",
+
+      age: 23,
+
+      role: "Undergraduate Job Seeker",
+
+      image: "/avatar.png",
+
+      bio:
+        "yuhansi is preparing to enter the job market but is unsure whether his academic knowledge, projects, and existing skills match current industry expectations.",
+
+      goals: [
+        "Understand which skills are currently demanded by industry",
+        "Build a clear profile from existing skills and evidence",
+        "Understand career readiness and what to improve",
+        "Receive personalized learning guidance",
+        "Practice job interviews with AI feedback"
+      ],
+
+      frustrations: [
+        "Uncertainty about what employers currently expect",
+        "Skills and evidence are scattered across different sources",
+        "Difficulty identifying what skills need improvement",
+        "Generic learning recommendations",
+        "Limited opportunities for realistic interview practice"
+      ]
+    },
+
+    userFlow: [
+      "Explore Industry Insights",
+      "Build Skill Profile",
+      "Upload & Analyze Evidence",
+      "Review & Verify Skills",
+      "View Career Readiness",
+      "Identify Skill Gaps",
+      "Follow Personalized Learning",
+      "Practice AI Mock Interview",
+      "Track Improvement"
+    ],
+
+    wireframesIntro:
+      "I started with low-fidelity wireframes for the key experiences across the platform, focusing on creating a simple and connected journey between the four research components.",
+
+    wireframes: [
+      "/projects/wireframe-1.jpg",
+      "/projects/wireframe-2.jpg",
+      "/projects/wireframe-3.jpg"
+    ],
+
+    finalDesignIntro:
+      "The final prototype brings all research components together through a consistent visual language, reusable UI components, clear navigation, dashboards, and AI-driven interactions. I designed the complete platform experience and design system in Figma.",
+
+    prototypeUrl:
+      "https://www.figma.com/design/h8qQvzvbqHgFPoCASg9Qnc/Research-Prototype---Design-System?node-id=0-1&t=A7hbjEJIV9qTL14j-1",
+
+    whatILearned:
+      "I learned how to translate a complex AI-based research system into a simple user experience, connect multiple research components into one cohesive product journey, design AI-driven interactions, and build a scalable design system in Figma."
+  }
+},
+{
+  slug: "beauty-app",
+
+  title: "Beauty Product Shopping App",
+
+  category: "UI/UX Design",
+
+  type: "Mobile App UI & Prototype",
+
+  description:
+    "A modern beauty shopping app designed to make discovering, exploring, and purchasing skincare, makeup, and beauty products simple, personalized, and visually engaging.",
+
+  image: "/projects/pp.png",
+
+  tools: [
+    "Figma",
+    "Wireframing",
+    "Prototyping",
+    "UI Design",
+    "User Research"
+  ],
+
+  duration: "3 weeks",
+
+  role: "UI/UX Designer",
+
+  figmaUrl: "https://www.figma.com/design/OVS1YhWkMX08o2elzBAAcG/PINKPURPLE?node-id=102-90&t=FxtZ9T5M3NxvkLan-1",
+
+  caseStudy: {
+
+    problem:
+      "Beauty shoppers often browse through large product collections without an easy way to quickly find products that match their needs, preferences, and budget. Complex navigation and overwhelming product information can make the shopping experience frustrating.",
+
+    goal:
+      "Design a simple and visually engaging mobile shopping experience that helps users discover beauty products, explore product details, save favorites, manage their cart, and complete purchases with minimal effort.",
+
+    userResearch: {
+
+      intro:
+        "Research focused on understanding what users expect from a convenient and enjoyable mobile beauty shopping experience.",
+
+      points: [
+        "Users want to discover products quickly without browsing through overwhelming collections",
+        "Clear product images, prices, ratings, and details strongly influence purchasing decisions",
+        "Users prefer simple navigation and a fast checkout experience"
+      ],
+
+      chartData: [
+        {
+          name: "Easy Discovery",
+          value: 40,
+          color: "#EBA0FF"
+        },
+        {
+          name: "Product Information",
+          value: 35,
+          color: "#C084FC"
+        },
+        {
+          name: "Easy Checkout",
+          value: 25,
+          color: "#F9A8D4"
+        }
+      ]
+    },
+
+    userPersona: {
+
+      name: "Mia",
+
+      age: 22,
+
+      role: "University Student",
+
+      image: "/beauty-avatar.png",
+
+      bio:
+        "Mia enjoys discovering skincare and makeup products online. She wants a quick and visually appealing way to compare products, save her favorites, and purchase beauty essentials.",
+
+      goals: [
+        "Discover new beauty and skincare products",
+        "Quickly find products that match her needs",
+        "Compare prices, ratings, and product details",
+        "Save favorite products for later",
+        "Complete purchases quickly and easily"
+      ],
+
+      frustrations: [
+        "Too many products without clear categories",
+        "Difficulty finding relevant product information",
+        "Complicated shopping and checkout processes",
+        "Losing products she wants to purchase later",
+        "Cluttered and visually overwhelming shopping apps"
+      ]
+    },
+
+    userFlow: [
+      "Open App",
+      "Explore Products",
+      "Browse Categories",
+      "Search & Filter Products",
+      "View Product Details",
+      "Add to Favorites",
+      "Add to Cart",
+      "Review Cart",
+      "Checkout",
+      "Order Confirmation"
+    ],
+
+    wireframesIntro:
+      "I started with low-fidelity wireframes to establish the main shopping journey, focusing on product discovery, product details, favorites, cart management, and checkout.",
+
+    wireframes: [
+    
+    ],
+
+    finalDesignIntro:
+      "The final design uses a playful pink and purple visual direction to create a modern beauty-focused identity. Consistent product cards, typography, navigation, buttons, and reusable components create a cohesive shopping experience.",
+
+    prototypeUrl: "YOUR_FIGMA_URL",
+
+    whatILearned:
+      "I learned how to design a complete mobile e-commerce journey, organize large product collections through clear information architecture, create reusable components, and balance a strong visual identity with usability."
+  }
+},
+  {
     slug: "wedding-invitation-platform",
     title: "Wedding Invitation Platform",
     category: "UI/UX Design",
@@ -45,11 +303,10 @@ export const projectsData: Project[] = [
     description: "A premium digital wedding invitation platform featuring personalized guest experiences and real-time RSVP analytics.",
     image: "/projects/wedinvite.png",
     tools: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB", "Figma"],
-    year: "2024",
     duration: "4 weeks",
     role: "UI/UX & Full-Stack Developer",
     githubUrl: "https://github.com/yuhanzee/wedding-invitation-platform",
-    figmaUrl: "https://figma.com",
+    figmaUrl: "https://www.figma.com/design/EftmZ0r05vaFCTuEet7fKi/Wedding-Invitation-Template-01---Luxury-Floral?node-id=2-2&t=VNWVRrTsOGkJCk9e-1",
     caseStudy: {
       problem: "Traditional paper invitations lack interactive features, are slow to distribute, and make tracking RSVP responses a stressful administrative hassle for couples.",
       goal: "Design and develop a digital wedding portal with customizable invitations, RSVP tracking, Google Maps, count-down timer, gallery, and super admin analytics dashboard.",
@@ -98,7 +355,6 @@ export const projectsData: Project[] = [
     description: "A secure medical inventory and role-based healthcare management platform supporting admins, doctors, and suppliers.",
     image: "/projects/mediheaven.png",
     tools: ["React.js", "Node.js", "Express.js", "MongoDB", "Bootstrap 5", "JWT"],
-    year: "2024",
     duration: "5 weeks",
     role: "Inventory & Supplier Module Dev",
     githubUrl: "https://github.com/Ravidujee19/MediHeaven",
@@ -150,7 +406,6 @@ export const projectsData: Project[] = [
     description: "A community waste classification, collection scheduling, and recycling rewards system backed by secure REST APIs.",
     image: "/projects/greenscan.png",
     tools: ["React.js", "Node.js", "Express.js", "MongoDB", "Mongoose", "JWT", "REST API", "Git", "GitHub"],
-    year: "2024",
     duration: "4 weeks",
     role: "Full-Stack Developer",
     githubUrl: "https://github.com/yuhanzee/Smart-Waste-Management-System",
@@ -202,11 +457,10 @@ export const projectsData: Project[] = [
     description: "A gamified React Native app promoting skill development, productivity, and local youth employment networks.",
     image: "/projects/SDG8.png",
     tools: ["React Native", "Expo", "TypeScript", "Firebase", "Figma"],
-    year: "2024",
     duration: "6 weeks",
     role: "UI/UX & Mobile Developer",
     githubUrl: "https://github.com/Dilmith-Ranasinghe518/LocalLoop",
-    figmaUrl: "https://figma.com",
+    figmaUrl: "https://www.figma.com/design/fm2BBtmKskEYcvNdRc4gkT/localloop?node-id=0-1&t=ZcYGuBdHbZlARRvk-1",
     caseStudy: {
       problem: "Youth struggle to find local mentors, lack access to guided skill development modules, and miss structured portals to track career growth.",
       goal: "Develop a mobile app aligned with UN SDG 08 featuring user authentication, real-time chat, challenge achievements, and profile systems.",
@@ -255,7 +509,6 @@ export const projectsData: Project[] = [
     description: "A web-based bus transit system with role-based dashboard access for admins, booking clerks, and drivers.",
     image: "/projects/citybus.png",
     tools: ["PHP", "MySQL", "HTML", "CSS", "JavaScript", "Apache (XAMPP)"],
-    year: "2023",
     duration: "3 weeks",
     role: "Backend & Database Developer",
     githubUrl: "https://github.com/Dilmith-Ranasinghe518/CityBus",

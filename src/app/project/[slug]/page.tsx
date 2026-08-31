@@ -3,7 +3,7 @@
 import React, { use, useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { projectsData, Project } from "@/data/projects";
+import { projectsData, Project } from "@/features/projects/data/projects";
 import {
   ArrowRightIcon,
   CalendarIcon,
@@ -12,7 +12,7 @@ import {
   AwardIcon,
   CheckmarkIcon,
   LightBulbIcon,
-} from "@/components/Icons";
+} from "@/shared/components/Icons";
 import styles from "./page.module.css";
 
 // Next.js params type
@@ -25,6 +25,7 @@ export default function ProjectPage({ params }: PageProps) {
   const { slug } = use(params);
   const [liked, setLiked] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [selectedWireframe, setSelectedWireframe] = useState<string | null>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -340,16 +341,31 @@ export default function ProjectPage({ params }: PageProps) {
                   {project.caseStudy.wireframesIntro ||
                     "Initial hand-drawn sketches and gray-box layout prototypes were mapped to resolve information structure."}
                 </p>
-                <div className={styles.designGrid}>
-                  <div className={styles.designBlock}>
-                    <div className="grid-dots" style={{ position: "absolute", inset: 0, opacity: 0.15 }} />
-                    <span className={styles.designWatermark}>Low-Fi Layout</span>
+                {project.caseStudy.wireframes && project.caseStudy.wireframes.length > 0 ? (
+                  <div className={styles.designGrid}>
+                    {project.caseStudy.wireframes.map((wf, idx) => (
+                      <div 
+                        key={idx} 
+                        className={styles.designBlock} 
+                        style={{ padding: 0, overflow: 'hidden', cursor: 'pointer' }}
+                        onClick={() => setSelectedWireframe(wf)}
+                      >
+                        <Image src={wf} alt={`Wireframe ${idx + 1}`} width={800} height={600} style={{ width: '100%', height: 'auto', objectFit: 'cover' }} />
+                      </div>
+                    ))}
                   </div>
-                  <div className={styles.designBlock}>
-                    <div className="grid-dots" style={{ position: "absolute", inset: 0, opacity: 0.15 }} />
-                    <span className={styles.designWatermark}>Wireframe Grid</span>
+                ) : (
+                  <div className={styles.designGrid}>
+                    <div className={styles.designBlock}>
+                      <div className="grid-dots" style={{ position: "absolute", inset: 0, opacity: 0.15 }} />
+                      <span className={styles.designWatermark}>Low-Fi Layout</span>
+                    </div>
+                    <div className={styles.designBlock}>
+                      <div className="grid-dots" style={{ position: "absolute", inset: 0, opacity: 0.15 }} />
+                      <span className={styles.designWatermark}>Wireframe Grid</span>
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
 
@@ -477,6 +493,51 @@ export default function ProjectPage({ params }: PageProps) {
           </div>
         )}
       </div>
+
+      {/* LIGHTBOX MODAL */}
+      {selectedWireframe && (
+        <div 
+          style={{
+            position: 'fixed',
+            inset: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+            zIndex: 9999,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '20px'
+          }}
+          onClick={() => setSelectedWireframe(null)}
+        >
+          <div 
+            style={{ position: 'relative', width: '100%', maxWidth: '1200px', maxHeight: '90vh' }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setSelectedWireframe(null)}
+              style={{
+                position: 'absolute',
+                top: '-40px',
+                right: '0',
+                background: 'none',
+                border: 'none',
+                color: 'white',
+                fontSize: '32px',
+                cursor: 'pointer'
+              }}
+            >
+              &times;
+            </button>
+            <Image 
+              src={selectedWireframe} 
+              alt="Full Wireframe" 
+              width={1200}
+              height={900}
+              style={{ width: '100%', height: 'auto', maxHeight: '90vh', objectFit: 'contain' }} 
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }

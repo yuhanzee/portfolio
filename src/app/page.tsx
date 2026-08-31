@@ -2,11 +2,11 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { Navbar } from "@/components/Navbar";
-import { ProjectFilter } from "@/components/ProjectFilter";
-import { ProjectCard } from "@/components/ProjectCard";
-import { ContactForm } from "@/components/ContactForm";
-import { projectsData } from "@/data/projects";
+import { Navbar } from "@/shared/components/Navbar";
+import { ProjectFilter } from "@/features/projects/components/ProjectFilter";
+import { ProjectCard } from "@/features/projects/components/ProjectCard";
+import { ContactForm } from "@/features/contact/components/ContactForm";
+import { projectsData } from "@/features/projects/data/projects";
 import {
   DownloadIcon,
   ArrowRightIcon,
@@ -18,7 +18,7 @@ import {
   ReactLogo,
   NextjsLogo,
   NodejsLogo,
-} from "@/components/Icons";
+} from "@/shared/components/Icons";
 import {
   OvalScribble,
   UnderlineScribble,
@@ -43,7 +43,7 @@ import {
   StarOutlineDoodle,
   YellowCurvedArrow,
   MusicNoteDoodle,
-} from "@/components/Scribbles";
+} from "@/shared/components/Scribbles";
 import styles from "./page.module.css";
 
 export default function Home() {
